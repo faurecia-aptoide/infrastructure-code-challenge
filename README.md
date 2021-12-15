@@ -31,3 +31,10 @@ Application is deployed when provision is happening
 The solution can be up and running by executing a single command/script
 
 Design and implement a process for deploying new application versions with no downtime
+
+### Proposed Solution
+Our solution includes:
+ - makefile to build (image challenge:latest) and deploy the image to Minikube
+ - dockerfile to build the project (exposes port 3000 from npm start)
+ - kubernetes yaml for the service (clusterIp for port 3000) and deployment (deployment with 1 replica)
+ - kubernetes yaml for ingress controller exposing the service (nginx exposing a custom local domain: http://challenge.local.faurecia-aptoide.com/)

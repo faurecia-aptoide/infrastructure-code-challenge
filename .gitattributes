@@ -1,0 +1,9 @@
+
+# Files that are going to be encrypted
+deploy/challenge.mk filter=git-crypt diff=git-crypt
+kubernetes/challenge/deployment.yaml filter=git-crypt diff=git-crypt
+kubernetes/challenge/service.yaml filter=git-crypt diff=git-crypt
+kubernetes/ingress.yaml filter=git-crypt diff=git-crypt
+services/challenge/Dockerfile filter=git-crypt diff=git-crypt
+# Making sure that .gitattributes is never encrypted. DON'T TOUCH THAT LINE AND ONE BELOW
+.gitattributes !filter !diff
