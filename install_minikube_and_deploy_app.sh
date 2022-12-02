@@ -1,12 +1,8 @@
-
 #!/bin/bash
 
-read -s -p "Custom Port to expose the application between 30000-32768 (default is 30100): " portValue
-customPort=${portValue:-30100}
-
-read -s -p "Custom Image (default is anfabio/aptoide-challenge:latest): " imageValue
-image=${imageValue:-anfabio/aptoide-challenge:latest}
-
+# getting parameters
+customPort=${1:-8080}
+image=${2:-anfabio/aptoide-challenge:latest}
 
 # installing docker
 echo "Installing docker ..."
