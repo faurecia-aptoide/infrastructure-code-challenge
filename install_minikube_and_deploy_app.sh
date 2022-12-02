@@ -2,7 +2,6 @@
 
 # getting parameters
 customPort=${1:-8080}
-image=${2:-anfabio/aptoide-challenge:latest}
 
 # installing docker
 echo "Installing docker ..."
@@ -27,7 +26,7 @@ minikube start --force
 
 # creating the deployment
 echo "Creating Deployment ..."
-kubectl create deployment aptoid-challenge --replicas=2 --image=$image
+kubectl create deployment aptoid-challenge --replicas=2 --image=anfabio/aptoide-challenge:latest
 
 # wait for deployment to be ready
 echo "Waiting Deployment to be Ready ..."
