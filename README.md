@@ -12,14 +12,11 @@ Best practices dictates that a pipeline should be used to compile the code and c
 For this challenge I used my public DockerHub account (anfabio). So there's no need to compile the code and create the image again. But if you need you can use the script called "create_image.sh".
 
 
-
 ## Application Deployment
 
 The solution can be up and running by executing a single script: install_minikube_and_deploy_app.sh
 
-It will install docker and minikube to the local machine. I used a fresh ubuntu server 22.04 with 4 CPU cores, 8GB of RAM and 20GB od disk available. It will ask for a custom port number as well as a custom image. The defaul values are:
-port: 8080
-image: anfabio/aptoide-challenge:latest
+It will install docker and minikube to the local machine. I used a fresh ubuntu server 22.04 with 4 CPU cores, 8GB of RAM and 20GB od disk available. You can specify a custom port number as the first parameter. The default value is 8080.
 
 The deployment create 2 Pods and a NodePort for the requests.
 
