@@ -12,6 +12,7 @@ Best practices dictates that a pipeline should be used to compile the code and c
 For this challenge I used my public DockerHub account (anfabio). So there's no need to compile the code and create the image again. But if you need you can use the script called "create_image.sh".
 
 
+
 ## Application Deployment
 
 The solution can be up and running by executing a single script: install_minikube_and_deploy_app.sh
@@ -36,16 +37,11 @@ curl https://raw.githubusercontent.com/anfabio/infrastructure-code-challenge/mas
 
 To specify a custom port and/or image use:
 
-curl https://raw.githubusercontent.com/anfabio/infrastructure-code-challenge/master/install_minikube_and_deploy_app.sh | bash -s -- <port> <image>
+curl https://raw.githubusercontent.com/anfabio/infrastructure-code-challenge/master/install_minikube_and_deploy_app.sh | bash -s -- <port>
 
 ex:
-curl https://raw.githubusercontent.com/anfabio/infrastructure-code-challenge/master/install_minikube_and_deploy_app.sh | bash -s -- 8080 anfabio/aptoide-challenge:latest
+curl https://raw.githubusercontent.com/anfabio/infrastructure-code-challenge/master/install_minikube_and_deploy_app.sh | bash -s -- 8080
 
-
-
-
-
-  
 
 
 
