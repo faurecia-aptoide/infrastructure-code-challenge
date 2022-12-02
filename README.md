@@ -34,7 +34,7 @@ curl https://raw.githubusercontent.com/anfabio/infrastructure-code-challenge/mas
 
 To specify a custom port and/or image use:
 
-curl https://raw.githubusercontent.com/anfabio/infrastructure-code-challenge/master/install_minikube_and_deploy_app.sh | bash -s -- <port>
+curl https://raw.githubusercontent.com/anfabio/infrastructure-code-challenge/master/install_minikube_and_deploy_app.sh | bash -s -- port
 
 ex:
 curl https://raw.githubusercontent.com/anfabio/infrastructure-code-challenge/master/install_minikube_and_deploy_app.sh | bash -s -- 8080
