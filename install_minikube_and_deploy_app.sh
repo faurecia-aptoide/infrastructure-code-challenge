@@ -64,9 +64,10 @@ EOF
 # restarting HAproxy service
 systemctl restart haproxy.service
 
-url="http://localhost:$customPort"
+url="http://localhost:"$customPort
+echo $url
 
 # opening the URL
-echo "Accessing the aaplication ..."
+echo "Accessing the application ..."
 curl "$url"
 xdg-open "$url" 2>/dev/null
