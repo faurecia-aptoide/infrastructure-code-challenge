@@ -32,13 +32,9 @@ kubectl create deployment aptoid-challenge --replicas=2 --image=anfabio/aptoide-
 echo "Waiting Deployment to be Ready ..."
 kubectl wait --for=condition=available deployment/aptoid-challenge --timeout=10m
 
-# wait for deployment to be ready
-echo "Waiting Deployment to be Ready ..."
-
 # expose the application
 echo "Exposing the application ..."
 kubectl expose deployment aptoid-challenge --type=NodePort --port=3000
-
 
 # getting minikube service ip and port
 minikube_url=$(minikube service aptoid-challenge --url | cut -d'/' -f3)
