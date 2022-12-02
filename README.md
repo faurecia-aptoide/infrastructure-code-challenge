@@ -29,15 +29,15 @@ In the future the external balancer (haproxy) could be configured to send reques
 
 To run int with default parameters user:
 
-curl https://raw.githubusercontent.com/anfabio/infrastructure-code-challenge/master/install_minikube_and_deploy_app.sh | bash
+curl -sL https://raw.githubusercontent.com/anfabio/infrastructure-code-challenge/master/install_minikube_and_deploy_app.sh | bash
 
 
 To specify a custom port and/or image use:
 
-curl https://raw.githubusercontent.com/anfabio/infrastructure-code-challenge/master/install_minikube_and_deploy_app.sh | bash -s -- port
+curl -sL https://raw.githubusercontent.com/anfabio/infrastructure-code-challenge/master/install_minikube_and_deploy_app.sh | bash -s -- port
 
 ex:
-curl https://raw.githubusercontent.com/anfabio/infrastructure-code-challenge/master/install_minikube_and_deploy_app.sh | bash -s -- 8080
+curl -sL https://raw.githubusercontent.com/anfabio/infrastructure-code-challenge/master/install_minikube_and_deploy_app.sh | bash -s -- 8080
 
 
 
