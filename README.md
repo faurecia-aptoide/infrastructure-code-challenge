@@ -27,12 +27,12 @@ If you have a browser installed it will try to open the application inside it as
 In the future the external balancer (haproxy) could be configured to send requests to more than one Kubernetes cluster.
 
 
-To run int with default parameters user:
+To deploy using the default parameters:
 
 curl -sL https://raw.githubusercontent.com/anfabio/infrastructure-code-challenge/master/install_minikube_and_deploy_app.sh | bash
 
 
-To specify a custom port and/or image use:
+To specify a custom port use:
 
 curl -sL https://raw.githubusercontent.com/anfabio/infrastructure-code-challenge/master/install_minikube_and_deploy_app.sh | bash -s -- port
 
