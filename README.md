@@ -1,33 +1,95 @@
-# Faurecia Aptoide
-## Infrastructure Code Challenge
-Thank you so much for taking the time to work on our code challenge. We expect it to take approx 4h to complete and would be ideal if you can send it to us within 1 week timeframe. Please don't hesitate to contact us by email with whatever question you have about it.
+# Appning – Infrastructure Code Challenge (Modernized with Terraform)
 
-### Node deployment
-Our development team has built the following nodejs application that needs to be deployed and public accessible with high availability: https://github.com/nodejs/examples/tree/main/servers/express/api-with-express-and-handlebars
+Welcome! In this version of the challenge, you'll provision a Kubernetes environment using **Terraform** and deploy a Node.js application using Kubernetes manifests. The focus is on achieving **high availability**, **fault tolerance**, and **automation** using infrastructure-as-code practices.
 
-### Your task
-Design and describe the stack for this application (a draw/schema would be nice)
+We'd appreciate it if you could submit your solution within **1 week** of receiving the challenge. Feel free to contact us by email if you have any questions.
 
-Implement code to provision a local infrastructure based in Kubernetes. (Example: Minikube)
+---
 
-Implement code to deploy the application (any language or open source tool is permitted)
+## 📦 Application to Deploy
 
-Application must be accessible on a custom port using localhost, after deploy browser should open in the website
+You’ll be working with the following Node.js app from the official Node.js examples:
 
-The solution should be fault tolerance with high availability
+🔗 [API with Express and Handlebars](https://github.com/nodejs/examples/tree/main/servers/express/api-with-express-and-handlebars)
 
-The solution can be up and running by executing a single command/script
+The app must be deployed with **high availability**, **fault tolerance**, and be **publicly accessible** on a custom port.
 
-### We expect
-The solution should be easy to manage/maintain, if this is not possible to achieve within the proposed time frame then please describe any futures changes
+---
 
-You should write a few lines explaining you development setup (how did you create or emulate the resources)
+## ✅ Your Tasks
 
-The code of the challenge written in a Git repository and zipped. Try to not write the entire program in one commit and version it as much as you can. For us, understanding your progress is valuable. You can also share a link to the Zip on a file sharing service in case your email provider doesn't allow for the attachment to be sent. In that case, please make sure that the file can be correctly downloaded using a incognito/private window.
+### 1. 📐 Design the Architecture
+- Describe the infrastructure and deployment stack you are using.
+- Include a **diagram or schema** showing:
+  - Cloud infrastructure components (networking, compute, load balancer)
+  - Kubernetes components (Deployment, Service, Ingress, etc.)
+  - Application access flow
 
-### Extras / Optional
-Application is deployed when provision is happening
+---
 
-The solution can be up and running by executing a single command/script
+### 2. ☁️ Provision Infrastructure Using Terraform
+Use **Terraform** to provision a Kubernetes environment on your preferred provider. This can be either:
 
-Design and implement a process for deploying new application versions with no downtime
+- **Managed Kubernetes** (e.g., EKS, AKS, GKE)
+- **Self-managed Kubernetes** on virtual machines (e.g., EC2, GCE, Azure VM)
+
+> **Note**: While any cloud provider or local VM solution is acceptable, AWS is strongly preferred. A cloud-native setup is encouraged, though self-managed Kubernetes remains an acceptable alternative.
+
+Your Terraform code should provision:
+- Networking (VPC, subnets, firewall rules, etc.)
+- Compute resources (e.g., EC2 or managed nodes)
+- Kubernetes cluster and any necessary IAM or service accounts
+
+---
+
+### 3. 🚀 Deploy the Application (Kubernetes Manifests)
+Use raw Kubernetes manifests (`.yaml`) to deploy the application. Ensure your manifests include:
+
+- A `Deployment` with multiple replicas
+- A `Service` (NodePort, LoadBalancer, or Ingress)
+- Rolling update strategy
+
+The application must be accessible via a **public endpoint on a custom port**, e.g., `http://<your-url>:8080`.
+
+---
+
+### 4. 🛡 High Availability & Fault Tolerance
+Ensure the following characteristics:
+- ≥2 replicas
+- Rolling update deployment strategy
+- Automatic restarts on failure
+
+---
+
+## 🛠 Development Setup (Please Document)
+
+In your submission, include:
+- Operating system and local environment details
+- Terraform version, Kubernetes version, and CLI tools used
+- Cloud provider, region, and instance types (if applicable)
+- How the application endpoint was verified
+- A few lines explaining your development setup (how did you create or emulate the resources)
+
+## 🧪 Bonus Points
+
+These features are not required, but will be appreciated:
+
+- ✅ Ingress controller with custom hostname
+- ✅ Liveness and readiness probes
+- ✅ Zero-downtime deployments
+- ✅ Monitoring setup (e.g., Prometheus/Grafana)
+
+---
+
+## 📤 Submission Instructions
+
+- Submit your codebase as a `.zip` file or
+- Share a publicly accessible download link (ensure it works in incognito mode)
+
+> Please use **multiple commits** to show your progress and evolution of the solution.
+
+ - If you’re unable to complete all aspects within the timeframe, please describe what you would improve or add with more time.
+
+---
+
+We look forward to reviewing your solution. Good luck!
