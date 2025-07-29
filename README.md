@@ -18,7 +18,7 @@ This image is based on NGINX and serves an HTML page that displays useful runtim
 
 This makes it ideal for demonstrating high availability and network routing within Kubernetes.
 
-The application must be deployed with **high availability**, **fault tolerance**, and be **publicly accessible** on a custom port (e.g., `http://<your-url>:8080`).
+The application must be deployed with **high availability**, **fault tolerance**, and be **publicly accessible** (e.g., `http://<your-url>`).
 
 ---
 
@@ -80,6 +80,7 @@ In your submission, include:
 These features are not required, but will be appreciated:
 
 - ✅ Ingress controller with custom hostname
+- ✅ HTTPS
 - ✅ Liveness and readiness probes
 - ✅ Zero-downtime deployments
 - ✅ Monitoring setup (e.g., Prometheus/Grafana)
