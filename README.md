@@ -8,11 +8,17 @@ We'd appreciate it if you could submit your solution within **1 week** of receiv
 
 ## 📦 Application to Deploy
 
-You’ll be working with the following Node.js app from the official Node.js examples:
+You’ll be deploying the official [`nginxdemos/hello`](https://hub.docker.com/r/nginxdemos/hello) container.
 
-🔗 [API with Express and Handlebars](https://github.com/nodejs/examples/tree/main/servers/express/api-with-express-and-handlebars)
+This image is based on NGINX and serves an HTML page that displays useful runtime information such as:
 
-The app must be deployed with **high availability**, **fault tolerance**, and be **publicly accessible** on a custom port.
+- The internal IP address of the container
+- Hostname and server address
+- Request headers
+
+This makes it ideal for demonstrating high availability and network routing within Kubernetes.
+
+The application must be deployed with **high availability**, **fault tolerance**, and be **publicly accessible** on a custom port (e.g., `http://<your-url>:8080`).
 
 ---
 
