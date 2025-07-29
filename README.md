@@ -1,4 +1,4 @@
-# Appning – Infrastructure Code Challenge (Modernized with Terraform)
+# Appning – Infrastructure Code Challenge
 
 Welcome! In this version of the challenge, you'll provision a Kubernetes environment using **Terraform** and deploy a Node.js application using Kubernetes manifests. The focus is on achieving **high availability**, **fault tolerance**, and **automation** using infrastructure-as-code practices.
 
@@ -47,7 +47,6 @@ Use raw Kubernetes manifests (`.yaml`) to deploy the application. Ensure your ma
 
 - A `Deployment` with multiple replicas
 - A `Service` (NodePort, LoadBalancer, or Ingress)
-- Rolling update strategy
 
 The application must be accessible via a **public endpoint on a custom port**, e.g., `http://<your-url>:8080`.
 
